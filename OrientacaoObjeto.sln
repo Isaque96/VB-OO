@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PrimeiraClass", "PrimeiraClass\PrimeiraClass.vbproj", "{4F91053F-703E-4D0A-BC00-FA7786340783}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ByteBank", "ByteBank\ByteBank.vbproj", "{1930B5B0-41EF-45D3-A411-1EC4FCEBF58F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4F91053F-703E-4D0A-BC00-FA7786340783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F91053F-703E-4D0A-BC00-FA7786340783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F91053F-703E-4D0A-BC00-FA7786340783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1930B5B0-41EF-45D3-A411-1EC4FCEBF58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1930B5B0-41EF-45D3-A411-1EC4FCEBF58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1930B5B0-41EF-45D3-A411-1EC4FCEBF58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1930B5B0-41EF-45D3-A411-1EC4FCEBF58F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
