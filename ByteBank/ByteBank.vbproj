@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.vb" />
     <Compile Include="ContaCorrente.vb" />
     <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>

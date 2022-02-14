@@ -1,27 +1,41 @@
-﻿Public Class FrmPrincipal
-    Dim ContaDaGabriela As New ContaCorrente
-    Dim ContaDoBruno As New ContaCorrente
+﻿Imports ByteBank.ByteBank
+
+Public Class FrmPrincipal
+    Dim ContaDaGabriela As New ContaCorrente(100)
+    Dim ContaDoBruno As New ContaCorrente(500)
+    Dim Bruno As New Cliente("Bruno", "10987654321")
+    Dim Gabriela As New Cliente("Gabriela", "12345678910")
 
     Public Sub New()
         InitializeComponent()
 
         'Inicializando Conta da Gabriela
-        ContaDaGabriela.Titular = "Gabriela"
+        Gabriela.Cidade = "São Paulo"
+        Gabriela.Profissao = "Desenvolvedor"
+
+        ContaDaGabriela.Titular = Gabriela
         ContaDaGabriela.Agencia = 863
         ContaDaGabriela.Conta = 863141
 
-        LblBemVindo.Text = "Bem Vindo " + ContaDaGabriela.Titular + " / Ag: " + ContaDaGabriela.Agencia.ToString() _
-            + " / Cc: " + ContaDaGabriela.Conta.ToString()
+        ContaDaGabriela.Saldo = -100
+
+        LblBemVindo.Text = "Bem Vindo " + ContaDaGabriela.Titular.Nome + " / Ag: " + ContaDaGabriela.Agencia.ToString() _
+            + " / Cc: " + ContaDaGabriela.Conta.ToString() + " CPF: " + ContaDaGabriela.Titular.CPF
         TxbSaldoAtual.Text = ContaDaGabriela.Saldo.ToString()
 
         'Inicializando a Conta do Bruno
-        ContaDoBruno.Titular = "Bruno"
+        Bruno.Cidade = "Rio de Janeiro"
+        Bruno.Profissao = "Setor Administrativo"
+
+        ContaDoBruno.Titular = Bruno
         ContaDoBruno.Agencia = 863
         ContaDoBruno.Conta = 863224
 
-        LblBemVindo2.Text = "Bem Vindo " + ContaDoBruno.Titular + " / Ag: " + ContaDoBruno.Agencia.ToString() _
-            + " / Cc: " + ContaDoBruno.Conta.ToString()
+        LblBemVindo2.Text = "Bem Vindo " + ContaDoBruno.Titular.Nome + " / Ag: " + ContaDoBruno.Agencia.ToString() _
+            + " / Cc: " + ContaDoBruno.Conta.ToString() + " CPF: " + ContaDoBruno.Titular.CPF
         TxbSaldoAtual2.Text = ContaDoBruno.Saldo.ToString()
+
+        LblNumeroClientes.Text = "Número total de Clientes Cadastrados no Banco é: " + Cliente.NumerosClientes.ToString()
     End Sub
 
     Private Sub BtnSacar_Click(sender As Object, e As EventArgs) Handles BtnSacar.Click
@@ -148,5 +162,21 @@
 
         TxbExtrato.Text = ContaDaGabriela.Extrato
         TxbExtrato2.Text = ContaDoBruno.Extrato
+    End Sub
+
+    Private Sub BtnNomeGabriela_Click(sender As Object, e As EventArgs) Handles BtnNomeGabriela.Click
+        Dim Nome As String = TxbNomeGabriela.Text
+        Gabriela.Nome = Nome
+
+        LblBemVindo.Text = "Bem Vindo " + ContaDaGabriela.Titular.Nome + " / Ag: " + ContaDaGabriela.Agencia.ToString() _
+            + " / Cc: " + ContaDaGabriela.Conta.ToString()
+    End Sub
+
+    Private Sub BtnNomeBruno_Click(sender As Object, e As EventArgs) Handles BtnNomeBruno.Click
+        Dim Nome As String = TxbNomeBruno.Text
+        Bruno.Nome = Nome
+
+        LblBemVindo.Text = "Bem Vindo " + ContaDoBruno.Titular.Nome + " / Ag: " + ContaDoBruno.Agencia.ToString() _
+            + " / Cc: " + ContaDoBruno.Conta.ToString()
     End Sub
 End Class

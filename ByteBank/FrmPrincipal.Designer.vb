@@ -36,8 +36,14 @@ Partial Class FrmPrincipal
         Me.BtnDepositar = New System.Windows.Forms.Button()
         Me.TxbExtrato = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BtnNomeGabriela = New System.Windows.Forms.Button()
+        Me.TxbNomeGabriela = New System.Windows.Forms.TextBox()
+        Me.LblNomeGabriela = New System.Windows.Forms.Label()
         Me.BtnTransferir = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.BtnNomeBruno = New System.Windows.Forms.Button()
+        Me.TxbNomeBruno = New System.Windows.Forms.TextBox()
+        Me.LblNomeBruno = New System.Windows.Forms.Label()
         Me.BtnTransferir2 = New System.Windows.Forms.Button()
         Me.TxbExtrato2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,6 +57,7 @@ Partial Class FrmPrincipal
         Me.TxbSaldo2 = New System.Windows.Forms.TextBox()
         Me.TxbResultado2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.LblNumeroClientes = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -58,11 +65,11 @@ Partial Class FrmPrincipal
         'LblPrincipal
         '
         Me.LblPrincipal.AutoSize = True
-        Me.LblPrincipal.Location = New System.Drawing.Point(324, 9)
+        Me.LblPrincipal.Location = New System.Drawing.Point(9, 9)
         Me.LblPrincipal.Name = "LblPrincipal"
         Me.LblPrincipal.Size = New System.Drawing.Size(128, 13)
         Me.LblPrincipal.TabIndex = 0
-        Me.LblPrincipal.Text = "1 - Byte Bank - Formulário"
+        Me.LblPrincipal.Text = "2 - Byte Bank - Formulário"
         '
         'LblValor
         '
@@ -160,16 +167,19 @@ Partial Class FrmPrincipal
         '
         'TxbExtrato
         '
-        Me.TxbExtrato.Location = New System.Drawing.Point(204, 69)
+        Me.TxbExtrato.Location = New System.Drawing.Point(204, 108)
         Me.TxbExtrato.Multiline = True
         Me.TxbExtrato.Name = "TxbExtrato"
         Me.TxbExtrato.ReadOnly = True
         Me.TxbExtrato.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TxbExtrato.Size = New System.Drawing.Size(159, 256)
+        Me.TxbExtrato.Size = New System.Drawing.Size(159, 217)
         Me.TxbExtrato.TabIndex = 12
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.BtnNomeGabriela)
+        Me.GroupBox1.Controls.Add(Me.TxbNomeGabriela)
+        Me.GroupBox1.Controls.Add(Me.LblNomeGabriela)
         Me.GroupBox1.Controls.Add(Me.BtnTransferir)
         Me.GroupBox1.Controls.Add(Me.TxbExtrato)
         Me.GroupBox1.Controls.Add(Me.LblValor)
@@ -190,6 +200,31 @@ Partial Class FrmPrincipal
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "1ª Conta"
         '
+        'BtnNomeGabriela
+        '
+        Me.BtnNomeGabriela.Location = New System.Drawing.Point(301, 69)
+        Me.BtnNomeGabriela.Name = "BtnNomeGabriela"
+        Me.BtnNomeGabriela.Size = New System.Drawing.Size(66, 20)
+        Me.BtnNomeGabriela.TabIndex = 16
+        Me.BtnNomeGabriela.Text = "..."
+        Me.BtnNomeGabriela.UseVisualStyleBackColor = True
+        '
+        'TxbNomeGabriela
+        '
+        Me.TxbNomeGabriela.Location = New System.Drawing.Point(205, 69)
+        Me.TxbNomeGabriela.Name = "TxbNomeGabriela"
+        Me.TxbNomeGabriela.Size = New System.Drawing.Size(90, 20)
+        Me.TxbNomeGabriela.TabIndex = 15
+        '
+        'LblNomeGabriela
+        '
+        Me.LblNomeGabriela.AutoSize = True
+        Me.LblNomeGabriela.Location = New System.Drawing.Point(201, 53)
+        Me.LblNomeGabriela.Name = "LblNomeGabriela"
+        Me.LblNomeGabriela.Size = New System.Drawing.Size(35, 13)
+        Me.LblNomeGabriela.TabIndex = 14
+        Me.LblNomeGabriela.Text = "Nome"
+        '
         'BtnTransferir
         '
         Me.BtnTransferir.Location = New System.Drawing.Point(13, 209)
@@ -201,6 +236,9 @@ Partial Class FrmPrincipal
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.BtnNomeBruno)
+        Me.GroupBox2.Controls.Add(Me.TxbNomeBruno)
+        Me.GroupBox2.Controls.Add(Me.LblNomeBruno)
         Me.GroupBox2.Controls.Add(Me.BtnTransferir2)
         Me.GroupBox2.Controls.Add(Me.TxbExtrato2)
         Me.GroupBox2.Controls.Add(Me.Label1)
@@ -221,6 +259,31 @@ Partial Class FrmPrincipal
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "2ª Conta"
         '
+        'BtnNomeBruno
+        '
+        Me.BtnNomeBruno.Location = New System.Drawing.Point(300, 69)
+        Me.BtnNomeBruno.Name = "BtnNomeBruno"
+        Me.BtnNomeBruno.Size = New System.Drawing.Size(66, 20)
+        Me.BtnNomeBruno.TabIndex = 18
+        Me.BtnNomeBruno.Text = "..."
+        Me.BtnNomeBruno.UseVisualStyleBackColor = True
+        '
+        'TxbNomeBruno
+        '
+        Me.TxbNomeBruno.Location = New System.Drawing.Point(204, 69)
+        Me.TxbNomeBruno.Name = "TxbNomeBruno"
+        Me.TxbNomeBruno.Size = New System.Drawing.Size(90, 20)
+        Me.TxbNomeBruno.TabIndex = 17
+        '
+        'LblNomeBruno
+        '
+        Me.LblNomeBruno.AutoSize = True
+        Me.LblNomeBruno.Location = New System.Drawing.Point(201, 53)
+        Me.LblNomeBruno.Name = "LblNomeBruno"
+        Me.LblNomeBruno.Size = New System.Drawing.Size(35, 13)
+        Me.LblNomeBruno.TabIndex = 15
+        Me.LblNomeBruno.Text = "Nome"
+        '
         'BtnTransferir2
         '
         Me.BtnTransferir2.Location = New System.Drawing.Point(13, 209)
@@ -232,12 +295,12 @@ Partial Class FrmPrincipal
         '
         'TxbExtrato2
         '
-        Me.TxbExtrato2.Location = New System.Drawing.Point(204, 69)
+        Me.TxbExtrato2.Location = New System.Drawing.Point(204, 108)
         Me.TxbExtrato2.Multiline = True
         Me.TxbExtrato2.Name = "TxbExtrato2"
         Me.TxbExtrato2.ReadOnly = True
         Me.TxbExtrato2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TxbExtrato2.Size = New System.Drawing.Size(159, 256)
+        Me.TxbExtrato2.Size = New System.Drawing.Size(159, 217)
         Me.TxbExtrato2.TabIndex = 12
         '
         'Label1
@@ -334,11 +397,21 @@ Partial Class FrmPrincipal
         Me.Label5.TabIndex = 6
         Me.Label5.Text = "Resultado"
         '
+        'LblNumeroClientes
+        '
+        Me.LblNumeroClientes.AutoSize = True
+        Me.LblNumeroClientes.Location = New System.Drawing.Point(409, 9)
+        Me.LblNumeroClientes.Name = "LblNumeroClientes"
+        Me.LblNumeroClientes.Size = New System.Drawing.Size(99, 13)
+        Me.LblNumeroClientes.TabIndex = 15
+        Me.LblNumeroClientes.Text = "Numero de Clientes"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 437)
+        Me.Controls.Add(Me.LblNumeroClientes)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LblPrincipal)
@@ -383,4 +456,11 @@ Partial Class FrmPrincipal
     Friend WithEvents Label5 As Label
     Friend WithEvents BtnTransferir As Button
     Friend WithEvents BtnTransferir2 As Button
+    Friend WithEvents TxbNomeGabriela As TextBox
+    Friend WithEvents LblNomeGabriela As Label
+    Friend WithEvents LblNomeBruno As Label
+    Friend WithEvents BtnNomeGabriela As Button
+    Friend WithEvents BtnNomeBruno As Button
+    Friend WithEvents TxbNomeBruno As TextBox
+    Friend WithEvents LblNumeroClientes As Label
 End Class
